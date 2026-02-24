@@ -1,0 +1,16 @@
+ItemNo,Quantity,Description,Manufacturer,PartNumber,Supplier,SupplierPN,UnitPrice_EUR,Notes
+1,1,Arduino Uno R3,Arduino,A000066,Conrad,2008508,22.90,Main sensor/actuator controller
+2,1,B&R X20CP1585 PLC (or equivalent),B&R,X20CP1585,B&R,,,"Replace with your actual PLC target"
+3,1,24 V DC Power Supply 5 A,MEAN WELL,DR-120-24,Conrad,1449783,38.50,DIN rail mount
+4,1,5 V DC Power Supply 2 A,MEAN WELL,DR-15-5,Conrad,1449752,14.90,For Arduino & sensors
+5,8,Reflective IR Sensor (stock detection),TCRT5000,,DigiKey,,0.80,One per product slot
+6,1,Optical coin sensor / coin validator,,,DigiKey,,,Select validator matching coin type
+7,1,DS18B20 Temperature Sensor,Dallas / Maxim,DS18B20,DigiKey,DS18B20-ND,2.20,One-wire interface
+8,1,Reed Switch (door sensor),,,Conrad,,1.50,Normally-open type
+9,8,IR Break-beam Sensor (dispense confirm),,,DigiKey,,,
+10,8,12 V DC Dispensing Motor,,,,,,"One per product slot; replace with stepper if needed"
+11,1,Coin-return solenoid,,,,,,
+12,1,16x2 LCD Display (I2C),,,DigiKey,,4.50,Optional – HMI display
+13,1,Cooling Fan 12 V DC 80 mm,,,,,,"For temperature-controlled cabinet"
+14,1,Relay Module 8-channel 5 V,,,DigiKey,,6.90,Motor / solenoid switching
+15,1,Enclosure MDF / Aluminium sheet,,,Local,,,"Custom fabricated or 3D printed"
