@@ -1,0 +1,59 @@
+(*
+  Variables.var
+  Vending Machine Project – Global Variable Declarations
+  IEC 61131-3 Structured Text  |  B&R Automation Studio
+*)
+
+VAR_GLOBAL
+
+  (* ---------------------------------------------------------------
+     State machine
+  --------------------------------------------------------------- *)
+  gState          : VendingState_e := STATE_IDLE;
+  gPrevState      : VendingState_e := STATE_IDLE;
+
+  (* ---------------------------------------------------------------
+     Product configuration  (8 slots, indices 0..7)
+  --------------------------------------------------------------- *)
+  gProductSlots   : ARRAY[0..7] OF ProductSlot_t;
+  gSelectedSlot   : UINT := 0;
+
+  (* ---------------------------------------------------------------
+     Payment
+  --------------------------------------------------------------- *)
+  gPayment        : PaymentData_t;
+
+  (* ---------------------------------------------------------------
+     I/O bundles (exchanged with Arduino via serial / fieldbus)
+  --------------------------------------------------------------- *)
+  gSensors        : SensorInputs_t;
+  gActuators      : ActuatorOutputs_t;
+
+  (* ---------------------------------------------------------------
+     Timing
+  --------------------------------------------------------------- *)
+  gDispenseTimer  : TON;         (* Motor run time-out                 *)
+  gCollectTimer   : TON;         (* Collect reminder time-out          *)
+  gErrorTimer     : TON;         (* Error-reset delay                  *)
+
+  (* ---------------------------------------------------------------
+     Diagnostics / HMI
+  --------------------------------------------------------------- *)
+  gErrorCode      : UINT  := 0;
+  gTotalSales     : UDINT := 0;  (* Number of successful vend cycles   *)
+  gHmiMessage     : STRING[64];
+
+END_VAR
+
+VAR_GLOBAL CONSTANT
+
+  (* ---------------------------------------------------------------
+     Application constants
+  --------------------------------------------------------------- *)
+  cNumSlots           : UINT := 8;        (* Total number of product slots    *)
+  cDispenseTimeMs     : TIME := T#3000ms; (* Motor run duration               *)
+  cCollectTimeoutMs   : TIME := T#30000ms;(* Collect reminder after 30 s      *)
+  cMinTemperature     : REAL := 2.0;      (* Min cabinet temperature (°C)     *)
+  cMaxTemperature     : REAL := 10.0;     (* Max cabinet temperature (°C)     *)
+
+END_VAR

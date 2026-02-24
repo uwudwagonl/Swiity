@@ -1,0 +1,38 @@
+# -----------------------------------------------------------------------
+# Vending Machine Project – .gitignore
+# -----------------------------------------------------------------------
+
+# ----- Automation Studio build artefacts -----
+AutomationStudio/**/*.br
+AutomationStudio/**/*.o
+AutomationStudio/**/*.map
+AutomationStudio/**/Temp/
+AutomationStudio/**/Binaries/
+AutomationStudio/**/*.lby
+AutomationStudio/**/*.apj.bak
+
+# ----- Arduino -----
+# Arduino IDE build cache
+Arduino/**/.cache/
+Arduino/**/build/
+
+# ----- 3D printing G-code (large, generated from STL) -----
+# Uncomment the line below if you prefer NOT to track G-code in git:
+# 3DPrinting/GCode/*.gcode
+# 3DPrinting/GCode/*.bgcode
+
+# ----- CAD -----
+# Fusion 360 local cache
+CAD/**/*.tmp
+CAD/**/*~
+
+# ----- OS / editor artefacts -----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.code-workspace
