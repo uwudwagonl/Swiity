@@ -2,6 +2,12 @@
  * NfcTest.ino
  * Hardware test sketch for Elechouse NFC Module V3 (PN532) over I2C.
  *
+ * STATUS: ON HOLD
+ * TODO: Map card UIDs to analog current signals (4-20mA or similar)
+ *       for SPS/PLC input. Each known card UID → distinct current level.
+ *       Needs clarification on: number of cards, signal type (mA/V),
+ *       and available DAC/current loop hardware.
+ *
  * Wiring (Arduino Nano):
  *   SDA → A4
  *   SCL → A5
