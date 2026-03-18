@@ -26,6 +26,9 @@ Arduino/**/build/
 CAD/**/*.tmp
 CAD/**/*~
 
+# ----- Claude Code -----
+CLAUDE.md
+
 # ----- OS / editor artefacts -----
 .DS_Store
 Thumbs.db
