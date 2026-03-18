@@ -1,0 +1,166 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890")
+  (paper "A4")
+
+  (title_block
+    (title "NFC Module V3 (PN532) – I2C Wiring")
+    (date "2026-03-17")
+    (rev "1.0")
+    (company "Swiity")
+    (comment 1 "Arduino Nano ↔ Elechouse NFC Module V3 (PN532)")
+    (comment 2 "I2C connection: SDA=A4, SCL=A5")
+  )
+
+  (lib_symbols
+    (symbol "Connector_Generic:Conn_01x04_Pin"
+      (pin_names (offset 1.016) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "Conn_01x04_Pin" (at 0 -7.62 0) (effects (font (size 1.27 1.27))))
+      (symbol "Conn_01x04_Pin_1_1"
+        (polyline (pts (xy 1.27 -5.08) (xy 0.508 -5.08)) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 -2.54) (xy 0.508 -2.54)) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 0) (xy 0.508 0)) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 2.54) (xy 0.508 2.54)) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (circle (center 0 -5.08) (radius 0.508) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (circle (center 0 -2.54) (radius 0.508) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (circle (center 0 0) (radius 0.508) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (circle (center 0 2.54) (radius 0.508) (stroke (width 0.1524) (type default)) (fill (type none)))
+        (pin passive line (at 5.08 2.54 180) (length 3.81) (name "Pin_1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 0 180) (length 3.81) (name "Pin_2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 -2.54 180) (length 3.81) (name "Pin_3" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line (at 5.08 -5.08 180) (length 3.81) (name "Pin_4" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+  )
+
+  ;; ── Arduino Nano (left side) ──
+
+  (symbol
+    (lib_id "Connector_Generic:Conn_01x04_Pin")
+    (at 101.6 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "11111111-1111-1111-1111-111111111111")
+    (property "Reference" "J1" (at 101.6 81.28 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "Arduino_Nano" (at 101.6 96.52 0) (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid "a1000001-0000-0000-0000-000000000001"))
+    (pin "2" (uuid "a1000002-0000-0000-0000-000000000002"))
+    (pin "3" (uuid "a1000003-0000-0000-0000-000000000003"))
+    (pin "4" (uuid "a1000004-0000-0000-0000-000000000004"))
+  )
+
+  ;; ── PN532 NFC Module (right side) ──
+
+  (symbol
+    (lib_id "Connector_Generic:Conn_01x04_Pin")
+    (at 152.4 88.9 0)
+    (mirror x)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "22222222-2222-2222-2222-222222222222")
+    (property "Reference" "J2" (at 152.4 81.28 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "PN532_NFC_V3" (at 152.4 96.52 0) (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid "b2000001-0000-0000-0000-000000000001"))
+    (pin "2" (uuid "b2000002-0000-0000-0000-000000000002"))
+    (pin "3" (uuid "b2000003-0000-0000-0000-000000000003"))
+    (pin "4" (uuid "b2000004-0000-0000-0000-000000000004"))
+  )
+
+  ;; ── Wires: J1 pin 1 (A4/SDA) → J2 pin 1 (SDA) ──
+
+  (wire (pts (xy 106.68 86.36) (xy 147.32 86.36))
+    (stroke (width 0) (type default))
+    (uuid "w0000001-0000-0000-0000-000000000001")
+  )
+
+  ;; ── Wires: J1 pin 2 (A5/SCL) → J2 pin 2 (SCL) ──
+
+  (wire (pts (xy 106.68 88.9) (xy 147.32 88.9))
+    (stroke (width 0) (type default))
+    (uuid "w0000002-0000-0000-0000-000000000002")
+  )
+
+  ;; ── Wires: J1 pin 3 (5V) → J2 pin 3 (VCC) ──
+
+  (wire (pts (xy 106.68 91.44) (xy 147.32 91.44))
+    (stroke (width 0) (type default))
+    (uuid "w0000003-0000-0000-0000-000000000003")
+  )
+
+  ;; ── Wires: J1 pin 4 (GND) → J2 pin 4 (GND) ──
+
+  (wire (pts (xy 106.68 93.98) (xy 147.32 93.98))
+    (stroke (width 0) (type default))
+    (uuid "w0000004-0000-0000-0000-000000000004")
+  )
+
+  ;; ── Net labels on Arduino side ──
+
+  (net_label "SDA_A4" (at 108.0 86.36 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "n0000001-0000-0000-0000-000000000001")
+  )
+  (net_label "SCL_A5" (at 108.0 88.9 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "n0000002-0000-0000-0000-000000000002")
+  )
+  (net_label "5V" (at 108.0 91.44 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "n0000003-0000-0000-0000-000000000003")
+  )
+  (net_label "GND" (at 108.0 93.98 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "n0000004-0000-0000-0000-000000000004")
+  )
+
+  ;; ── Net labels on PN532 side ──
+
+  (net_label "SDA_A4" (at 146.0 86.36 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "n0000005-0000-0000-0000-000000000005")
+  )
+  (net_label "SCL_A5" (at 146.0 88.9 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "n0000006-0000-0000-0000-000000000006")
+  )
+  (net_label "5V" (at 146.0 91.44 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "n0000007-0000-0000-0000-000000000007")
+  )
+  (net_label "GND" (at 146.0 93.98 0)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "n0000008-0000-0000-0000-000000000008")
+  )
+
+  ;; ── Title text ──
+
+  (text "Arduino Nano ↔ PN532 NFC Module V3 (I2C)"
+    (at 127.0 72.0 0)
+    (effects (font (size 2.54 2.54) bold) (justify center))
+    (uuid "t0000001-0000-0000-0000-000000000001")
+  )
+
+  (text "Pin 1: SDA (A4)  |  Pin 2: SCL (A5)  |  Pin 3: 5V  |  Pin 4: GND"
+    (at 127.0 76.0 0)
+    (effects (font (size 1.27 1.27)) (justify center))
+    (uuid "t0000002-0000-0000-0000-000000000002")
+  )
+
+  (text "PN532 DIP switches: set to I2C mode"
+    (at 127.0 102.0 0)
+    (effects (font (size 1.27 1.27)) (justify center))
+    (uuid "t0000003-0000-0000-0000-000000000003")
+  )
+)
