@@ -1,0 +1,9 @@
+VAR_CONFIG
+	::aoMotorspeed AT %QW."X20AO2622".AnalogOutput01;
+	::diMuenzeinwurf AT %IX."X1".DigitalInput01;
+	::doMotor[0] AT %QX."X3".DigitalOutput01;
+	::doMotor[1] AT %QX."X3".DigitalOutput02;
+	::doMotor[2] AT %QX."X3".DigitalOutput03;
+	::doMotor[3] AT %QX."X3".DigitalOutput04;
+	doLedEin AT %QX."X3".DigitalOutput05;
+END_VAR

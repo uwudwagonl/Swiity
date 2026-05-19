@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="4.12.6.106"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="Pads">
+  <Property Name="Description" Value="Bitmap group for input pads"/>
+  <Property Name="Index" Value="1"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1042" Value="Source[local].Bitmap[Key_NumPad]"/>
+    <BitmapRef ID="1043" Value="Source[local].Bitmap[Key_NumPad_pressed]"/>
+    <BitmapRef ID="1044" Value="None"/>
+    <BitmapRef ID="1045" Value="None"/>
+    <BitmapRef ID="1046" Value="Source[local].Bitmap[Key_ListPadVer]"/>
+    <BitmapRef ID="1047" Value="Source[local].Bitmap[Key_ListPadVer_pressed]"/>
+    <BitmapRef ID="1048" Value="Source[local].Bitmap[Key_ListPadHor]"/>
+    <BitmapRef ID="1049" Value="Source[local].Bitmap[Key_ListPadHor_pressed]"/>
+    <BitmapRef ID="1050" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer1]"/>
+    <BitmapRef ID="1051" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer1_pressed]"/>
+    <BitmapRef ID="1052" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer2]"/>
+    <BitmapRef ID="1053" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer2_pressed]"/>
+    <BitmapRef ID="1054" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer3]"/>
+    <BitmapRef ID="1055" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer3_pressed]"/>
+    <BitmapRef ID="1056" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer1]"/>
+    <BitmapRef ID="1057" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer3_pressed]"/>
+    <BitmapRef ID="1058" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer2_pressed]"/>
+    <BitmapRef ID="1059" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer1_pressed]"/>
+    <BitmapRef ID="1060" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer3]"/>
+    <BitmapRef ID="1061" Value="Source[local].Bitmap[Key_AlphaPadQVGA_Layer2]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1042" Value="0"/>
+    <Index ID="1043" Value="1"/>
+    <Index ID="1044" Value="20"/>
+    <Index ID="1045" Value="21"/>
+    <Index ID="1046" Value="40"/>
+    <Index ID="1047" Value="41"/>
+    <Index ID="1048" Value="42"/>
+    <Index ID="1049" Value="43"/>
+    <Index ID="1050" Value="50"/>
+    <Index ID="1051" Value="56"/>
+    <Index ID="1052" Value="52"/>
+    <Index ID="1053" Value="58"/>
+    <Index ID="1054" Value="54"/>
+    <Index ID="1055" Value="60"/>
+    <Index ID="1056" Value="51"/>
+    <Index ID="1057" Value="61"/>
+    <Index ID="1058" Value="59"/>
+    <Index ID="1059" Value="57"/>
+    <Index ID="1060" Value="55"/>
+    <Index ID="1061" Value="53"/>
+  </IndexMap>
+</BitmapGroup>

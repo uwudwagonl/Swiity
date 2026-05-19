@@ -1,0 +1,25 @@
+VAR
+	Visu : tVisu;
+	aoMotorspeed : INT;
+	diMuenzeinwurf : BOOL;
+	doMotor : ARRAY[0..3] OF BOOL;
+	doLedEin : BOOL;
+	psMotorspeed : INT;
+	gFach : ARRAY[0..3] OF tFach;
+	gSel : tAuswahl;
+	gPay : tZahlung;
+	gNfc : tNfcInfo;
+	gCoin : tMuenze;
+	do_Relais : BOOL;
+	diEspFach : ARRAY[0..3] OF BOOL;
+	diEspNfc : BOOL;
+	Perm_motorLaufzeit : ARRAY[0..3] OF UINT;
+END_VAR
+VAR RETAIN
+	Perm_ptMotorX : ARRAY[0..3] OF INT;
+	Perm_preisCent : ARRAY[0..3] OF UINT;
+	Perm_muenzwert : UINT;
+END_VAR
+VAR CONSTANT
+	TIMEOUT_ZAHLUNG_MS : UDINT := 60000;
+END_VAR
