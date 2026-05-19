@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="ALAB_PPC70.Hardware.hw" LastWriteTime="05/12/2026 16:24:01" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="4PPC70_0702_20B" Type="4PPC70.0702-20B" X="100" Y="100" />
+    <Module Name="X20BB80" Type="X20BB80" X="238" Y="256" />
+    <Module Name="X20BM11" Type="X20BM11" X="276" Y="256" />
+    <Module Name="X20DI8371" Type="X20DI8371" X="276" Y="256" />
+    <Module Name="X20TB12a" Type="X20TB12" X="276" Y="283" />
+    <Module Name="X20BM11a" Type="X20BM11" X="289" Y="256" />
+    <Module Name="X20DI8371a" Type="X20DI8371" X="289" Y="256" />
+    <Module Name="X20TB12b" Type="X20TB12" X="289" Y="283" />
+    <Module Name="X20BM11b" Type="X20BM11" X="302" Y="256" />
+    <Module Name="X20DO8322" Type="X20DO8322" X="302" Y="256" />
+    <Module Name="X20TB12c" Type="X20TB12" X="302" Y="283" />
+    <Module Name="X20BM11c" Type="X20BM11" X="315" Y="256" />
+    <Module Name="X20DO8322a" Type="X20DO8322" X="315" Y="256" />
+    <Module Name="X20TB12d" Type="X20TB12" X="315" Y="283" />
+    <Module Name="X20BM11d" Type="X20BM11" X="328" Y="256" />
+    <Module Name="X20DC1176" Type="X20DC1176" X="328" Y="256" />
+    <Module Name="X20TB12e" Type="X20TB12" X="328" Y="283" />
+    <Module Name="X20BM11e" Type="X20BM11" X="341" Y="256" />
+    <Module Name="X20AI4622" Type="X20AI4622" X="341" Y="256" />
+    <Module Name="X20TB12f" Type="X20TB12" X="341" Y="283" />
+    <Module Name="X20BM11f" Type="X20BM11" X="354" Y="256" />
+    <Module Name="X20AO4622" Type="X20AO4622" X="354" Y="256" />
+    <Module Name="X20TB12g" Type="X20TB12" X="354" Y="283" />
+    <Module Name="X20PS9400" Type="X20PS9400" X="263" Y="256" />
+    <Module Name="X20TB12" Type="X20TB12" X="263" Y="283" />
+    <Module Name="X20BC0083" Type="X20BC0083" X="238" Y="256" />
+  </Modules>
+  <Links>
+    <Link From="4PPC70_0702_20B" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="145.299988" Y="202" />
+      <Point X="145.299988" Y="202" />
+      <Point X="145.299988" Y="207" />
+      <Point X="145.299988" Y="331" />
+      <Point X="237.599991" Y="331" />
+      <Point X="252.599991" Y="331" />
+      <Point X="252.599991" Y="331" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

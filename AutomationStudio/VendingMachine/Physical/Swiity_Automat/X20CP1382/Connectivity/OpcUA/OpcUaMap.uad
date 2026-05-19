@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaMap xmlns="http://br-automation.co.at/AS/OpcUA">
+  <!--
+    Snackomat - OPC UA Datapoint-Freigabe
+    Ermoeglicht Claude Code (br-automation-mcp) den Lese-/Schreibzugriff
+    auf alle fuer die Visu und Steuerung relevanten Variablen.
+  -->
+  <ProcessVariables>
+
+    <!-- Visu-Strukturen -->
+    <ProcessVariable Name="Visu.page.setpage"             AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.page.actpage"             AccessRights="Read"/>
+    <ProcessVariable Name="Visu.buttons.P10_Selection1"   AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P10_Selection2"   AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P10_Selection3"   AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P10_Selection4"   AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P10_WaehleBar"    AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P10_WaehleKarte"  AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P20_BestaetigeBar"    AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P30_BestaetigeKarte"  AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.PXX_Abbrechen"        AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.PXX_GotoSettings"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P910_MoveMotor"       AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P910_Kalibriere1"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P910_Kalibriere2"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P910_Kalibriere3"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Visu.buttons.P910_Kalibriere4"     AccessRights="ReadWrite"/>
+
+    <!-- Fach-Bestand -->
+    <ProcessVariable Name="gFach[1]"  AccessRights="ReadWrite"/>
+    <ProcessVariable Name="gFach[2]"  AccessRights="ReadWrite"/>
+    <ProcessVariable Name="gFach[3]"  AccessRights="ReadWrite"/>
+    <ProcessVariable Name="gFach[4]"  AccessRights="ReadWrite"/>
+
+    <!-- Auswahl / Zahlung / NFC -->
+    <ProcessVariable Name="gSel"      AccessRights="Read"/>
+    <ProcessVariable Name="gPay"      AccessRights="Read"/>
+    <ProcessVariable Name="gNfc"      AccessRights="Read"/>
+    <ProcessVariable Name="gCoin"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="gEsp"      AccessRights="Read"/>
+
+    <!-- Hardware-IO fuer Tests -->
+    <ProcessVariable Name="diMuenzeinwurf" AccessRights="ReadWrite"/>
+    <ProcessVariable Name="do_Relais"      AccessRights="Read"/>
+    <ProcessVariable Name="doMotor"        AccessRights="ReadWrite"/>
+    <ProcessVariable Name="doLedEin"       AccessRights="ReadWrite"/>
+
+    <!-- Retain (Konfigwerte) -->
+    <ProcessVariable Name="Perm_preisCent"     AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Perm_motorLaufzeit" AccessRights="ReadWrite"/>
+    <ProcessVariable Name="Perm_muenzwert"     AccessRights="ReadWrite"/>
+
+  </ProcessVariables>
+</OpcUaMap>

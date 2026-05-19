@@ -1,0 +1,17 @@
+(* ========================================================== *)
+(* Muenzzaehlung (Program1) - lokale Variablen                *)
+(* Zaehlt Impulse der Lichtschranke (di_Lichtschranke)        *)
+(* mit Entprellung.                                           *)
+(* ========================================================== *)
+
+VAR
+
+    lastInput       : BOOL;          (* Zustand im letzten Tick *)
+    lastEdgeMs      : UDINT;         (* Zeitpunkt letzter steigender Flanke *)
+    entprellungMs   : UDINT := 20;   (* 20ms Entprellung *)
+
+END_VAR
+
+VAR CONSTANT
+
+END_VAR
