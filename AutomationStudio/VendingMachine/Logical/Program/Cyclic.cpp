@@ -42,12 +42,13 @@ void _CYCLIC ProgramCyclic(void)
 	/* ====================================================
 	 * Digitaleingaenge vom ESP32 auslesen
 	 * ==================================================== */
+	/* NPN-Transistor invertiert: ESP32 HIGH -> X20 liest LOW, ESP32 LOW -> X20 liest HIGH */
 	for (i = 0; i < 4; i++) {
-		gFach[i].istLeer = diEspFach[i] ? 0 : 1;   /* LOW = LEER */
+		gFach[i].istLeer = diEspFach[i] ? 1 : 0;   /* Transistor-Inversion: LOW=VOLL, HIGH=LEER */
 	}
-	gNfc.erkannt     = diEspNfc ? 1 : 0;
-	gNfc.inWhitelist = diEspNfc ? 1 : 0;   /* jede Karte gueltig */
-	gNfc.wartet      = diEspNfc ? 0 : 1;
+	gNfc.erkannt     = diEspNfc ? 0 : 1;   /* Transistor-Inversion */
+	gNfc.inWhitelist = diEspNfc ? 0 : 1;
+	gNfc.wartet      = diEspNfc ? 1 : 0;
 
 	/* Hilfsvariable fuer Visu: Farbwechsel der Progress-Bar */
 	gPay.bezahltGenug = (gCoin.summeCent >= gSel.preisCent && gSel.aktiv) ? 1 : 0;
