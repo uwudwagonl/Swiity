@@ -92,12 +92,12 @@ void _CYCLIC ProgramCyclic(void)
 		USINT selIdx = (USINT) Visu.settings.actMotorSelected;
 		if (selIdx > 3) selIdx = 0;
 
-		/* Tippbetrieb: gedrueckt -> Motor an */
+		/* Tippbetrieb: gedrueckt -> Motor an (Active-LOW Relais: 0=EIN, 1=AUS) */
 		if (Visu.buttons.P910_MoveMotor) {
-			doMotor[selIdx] = 1;
+			doMotor[selIdx] = 0;
 			aoMotorspeed    = psMotorspeed;
 		} else {
-			doMotor[selIdx] = 0;
+			doMotor[selIdx] = 1;
 			aoMotorspeed    = 0;
 		}
 
@@ -250,9 +250,9 @@ void _CYCLIC ProgramCyclic(void)
 		}
 		break;
 
-	case 6: /* Motor-Start */
+	case 6: /* Motor-Start (Active-LOW Relais: 0=EIN) */
 		idx = gSel.fachNr - 1;
-		if (idx <= 3) doMotor[idx] = 1;
+		if (idx <= 3) doMotor[idx] = 0;
 		stateZahlung      = 4;
 		lastMotorReqMs    = jetztMs;
 		Visu.page.setpage = _40_Ausgabe;
@@ -261,7 +261,7 @@ void _CYCLIC ProgramCyclic(void)
 	case 4: /* Motor laeuft - Timer-basiertes Stoppen */
 		idx = gSel.fachNr - 1;
 		if (idx <= 3 && (jetztMs - lastMotorReqMs) >= (UDINT) Perm_motorLaufzeit[idx]) {
-			doMotor[idx]      = 0;
+			doMotor[idx]      = 1;   /* Active-LOW: 1=AUS=Motor steht */
 			gPay.status       = 1;
 			stateZahlung      = 5;
 			lastMotorReqMs    = jetztMs;
@@ -269,7 +269,7 @@ void _CYCLIC ProgramCyclic(void)
 		}
 		/* Safety-Timeout */
 		if ((jetztMs - lastMotorReqMs) > 8000) {
-			if (idx <= 3) doMotor[idx] = 0;
+			if (idx <= 3) doMotor[idx] = 1;   /* Active-LOW: 1=AUS */
 			gPay.status       = 3;
 			stateZahlung      = 0;
 			Visu.page.setpage = _90_Fehler;

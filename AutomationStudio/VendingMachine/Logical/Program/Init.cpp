@@ -35,6 +35,9 @@ void _INIT ProgramInit(void)
 	}
 	Visu.settings.ptMotorVisuInput = (INT) Perm_ptMotorX[0];
 
+	/* Active-LOW Relais: 1 = HIGH = Relais AUS = Motor steht (sicherer Startzustand) */
+	for (i = 0; i < 4; i++) doMotor[i] = 1;
+
 	gSel.fachNr = 0;     gSel.aktiv = 0;     gSel.preisCent = 0;
 	gPay.modus  = 0;     gPay.eingezahltCent = 0;    gPay.status = 0;
 	gNfc.erkannt = 0;    gNfc.inWhitelist = 0;
