@@ -1,6 +1,11 @@
 VAR_CONFIG
 	::aoMotorspeed AT %QW."X20AO2622".AnalogOutput01;
 	::diMuenzeinwurf AT %IX."X1".DigitalInput01;
+	::diEspFach[0] AT %IX."X1".DigitalInput02;
+	::diEspFach[1] AT %IX."X1".DigitalInput03;
+	::diEspFach[2] AT %IX."X1".DigitalInput04;
+	::diEspFach[3] AT %IX."X1".DigitalInput05;
+	::diEspNfc AT %IX."X1".DigitalInput06;
 	::doMotor[0] AT %QX."X3".DigitalOutput01;
 	::doMotor[1] AT %QX."X3".DigitalOutput02;
 	::doMotor[2] AT %QX."X3".DigitalOutput03;
