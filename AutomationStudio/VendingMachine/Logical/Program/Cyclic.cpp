@@ -42,13 +42,17 @@ void _CYCLIC ProgramCyclic(void)
 	/* ====================================================
 	 * Digitaleingaenge vom ESP32 auslesen
 	 * ==================================================== */
-	/* NPN-Transistor invertiert: ESP32 HIGH -> X20 liest LOW, ESP32 LOW -> X20 liest HIGH */
+	/* Relais (Active-LOW) invertiert: ESP32 HIGH -> Relais AUS -> X20 liest LOW,
+	   ESP32 LOW -> Relais EIN -> X20 liest HIGH (24V) */
 	for (i = 0; i < 4; i++) {
-		gFach[i].istLeer = diEspFach[i] ? 1 : 0;   /* Transistor-Inversion: LOW=VOLL, HIGH=LEER */
+		gFach[i].istLeer = diEspFach[i] ? 1 : 0;   /* Relais-Inversion: LOW=VOLL, HIGH=LEER */
 	}
-	gNfc.erkannt     = diEspNfc ? 0 : 1;   /* Transistor-Inversion */
+	gNfc.erkannt     = diEspNfc ? 0 : 1;   /* Relais-Inversion */
 	gNfc.inWhitelist = diEspNfc ? 0 : 1;
 	gNfc.wartet      = diEspNfc ? 1 : 0;
+
+	/* Status-LED: leuchtet solange die SPS laeuft */
+	doLedEin = 1;
 
 	/* Hilfsvariable fuer Visu: Farbwechsel der Progress-Bar */
 	gPay.bezahltGenug = (gCoin.summeCent >= gSel.preisCent && gSel.aktiv) ? 1 : 0;
@@ -293,6 +297,4 @@ void _CYCLIC ProgramCyclic(void)
 
 	Visu.page.actpage = Visu.page.setpage;
 	do_Relais = (stateZahlung == 4);
-
-	(void) iFach;
 }

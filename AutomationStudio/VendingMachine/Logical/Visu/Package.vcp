@@ -145,8 +145,6 @@
     <Source File="BitmapGroups\Pads.bmgrp"/>
     <Source File="BitmapGroups\Pages.bmgrp"/>
     <Source File="BitmapGroups\msgBox.bmgrp"/>
-    <Source File="BitmapGroups\BitmapGroup_1.bmgrp"/>
-    <Source File="BitmapGroups\BitmapGroup_2.bmgrp"/>
     <Source File="Pages\_00_Init.page"/>
     <Source File="Pages\_10_Main.page"/>
     <Source File="Pages\_20_BarBezahlen.page"/>

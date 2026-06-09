@@ -2,7 +2,6 @@ VAR
 	stateZahlung : UINT;
 	lastMotorReqMs : UDINT;
 	jetztMs : UDINT;
-	iFach : USINT;
 	settingsHoldStartMs : UDINT;
 	settingsHoldActive : BOOL;
 	iTextSel : USINT;
