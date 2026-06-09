@@ -1,9 +1,10 @@
 // =============================================================
 //  Snackomat - Zentrale Konfigurationsdatei
 //  Hardware: ESP32 + 4x HC-SR04 + PN532 NFC
-//  Kommunikation: 5 digitale Leitungen zur B&R PLC
-//   GPIO16-19: Fach-Status (HIGH=VOLL, LOW=LEER)
-//   GPIO23:    NFC erkannt (~2s HIGH-Puls)
+//  ESP32 = reiner Sensor-/NFC-Knoten. Motorsteuerung = SPS.
+//  Kommunikation: 5 direkte Digitalleitungen zur B&R X20 SPS
+//   GPIO16-19 -> SPS DI: Fach-Status (HIGH=VOLL, LOW=LEER)
+//   GPIO23    -> SPS DI: NFC erkannt (~2s HIGH-Puls)
 // =============================================================
 #ifndef CONFIG_H
 #define CONFIG_H
@@ -31,7 +32,7 @@
 #define TRIG_FACH_4  25
 #define ECHO_FACH_4  35   // GPIO35 ist nur Input -> fuer Echo OK
 
-// Fach-Status Ausgaenge -> PLC Digitaleingaenge
+// Fach-Status Ausgaenge -> SPS Digitaleingaenge
 // HIGH = VOLL (Produkt vorhanden), LOW = LEER (Produkt fehlt)
 #define STATUS_PIN_1  16
 #define STATUS_PIN_2  17
@@ -44,7 +45,7 @@
 #define PN532_IRQ_PIN    13
 #define PN532_RST_PIN    15
 
-// NFC-Erkennungs-Ausgang -> PLC Digitaleingang
+// NFC-Erkennungs-Ausgang -> SPS Digitaleingang
 // HIGH (~2s) wenn eine beliebige Karte erkannt wurde
 #define NFC_OUT_PIN  23
 

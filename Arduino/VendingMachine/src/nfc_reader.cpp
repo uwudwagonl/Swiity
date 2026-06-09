@@ -1,7 +1,7 @@
 // =============================================================
 //  NfcReader - Implementation (PN532 I2C)
 //  Jede erkannte Karte (beliebige UID) setzt NFC_OUT_PIN fuer
-//  NFC_OUT_DAUER_MS auf HIGH -> PLC wertet das als Kartenbestaetigung.
+//  NFC_OUT_DAUER_MS auf HIGH -> SPS wertet das als Kartenbestaetigung.
 // =============================================================
 #include "nfc_reader.h"
 #include "config.h"

@@ -23,10 +23,6 @@ public:
     bool  ladeBestandStatus(int fach);                // default false = VOLL
     void  speichereBestandStatus(int fach, bool leer);
 
-    // Motor-Laufzeit pro Fach (ms). Default aus config.h wenn nicht gesetzt.
-    unsigned long ladeMotorLaufzeit(int fach);
-    void          speichereMotorLaufzeit(int fach, unsigned long ms);
-
     // Alle Werte verwerfen (Factory-Reset)
     void loescheAlles();
 

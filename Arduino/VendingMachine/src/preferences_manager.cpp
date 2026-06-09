@@ -43,19 +43,6 @@ void PreferencesManager::speichereBestandStatus(int fach, bool leer) {
     prefs.putBool(key.c_str(), leer);
 }
 
-unsigned long PreferencesManager::ladeMotorLaufzeit(int fach) {
-    if (!geoeffnet) return MOTOR_LAUFZEIT_DEFAULT_MS;
-    String key = "mt" + String(fach);
-    return prefs.getULong(key.c_str(), MOTOR_LAUFZEIT_DEFAULT_MS);
-}
-
-void PreferencesManager::speichereMotorLaufzeit(int fach, unsigned long ms) {
-    if (!geoeffnet) return;
-    String key = "mt" + String(fach);
-    prefs.putULong(key.c_str(), ms);
-    DBGF("NVS schreibe %s = %lu ms\n", key.c_str(), ms);
-}
-
 void PreferencesManager::loescheAlles() {
     if (!geoeffnet) return;
     prefs.clear();
